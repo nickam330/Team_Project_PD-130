@@ -1,0 +1,5 @@
+login_postgres = "postgres"
+password_postgres = "1236547"
+port = "5432"
+basadate_name = "vk_bot"
+url = "https://flask-bot-lu45.onrender.com/tap_one"

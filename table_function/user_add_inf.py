@@ -31,11 +31,20 @@ def add_gender (id_user:int ,user_gender:str, session):
 
 
 
-def add_city (id_user: int, our_city:str, session):
+def add_city_name_int (id_user: int, our_city:str,city_id:int, session):
     our_city_stand = our_city.lower()
     user = session.query(Users).filter(Users.id == id_user).first()
     if user:
+        user.city_id = city_id
         user.city = our_city_stand
+        session.commit()
+    else:
+        raise ValueError(f"User with id {id_user} not found")
+
+def add_status (id_user:int ,user_status:int,session):
+    user = session.query(Users).filter(Users.id == id_user).first()
+    if user:
+        user.status = user_status
         session.commit()
     else:
         raise ValueError(f"User with id {id_user} not found")
