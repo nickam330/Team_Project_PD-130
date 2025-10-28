@@ -19,14 +19,11 @@ def add_selected (user_id:int, selected_id:int, link:str, session):
     session.commit()
 
 
-def link_list (user_id:int, session):
+def link_list(user_id: int, session):
     user = session.query(Users).filter(Users.id == user_id).first()
-    link = []
     if not user:
         raise ValueError(f"User with id {user_id} not found")
-    for sel in user.selected:
-        link.append(sel.link)
-    return link
+    return [sel.select_user_id for sel in user.selected]
 
 
 

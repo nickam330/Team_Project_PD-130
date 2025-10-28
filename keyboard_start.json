@@ -1,31 +1,30 @@
 {
   "one_time": true,
   "buttons": [
-    [
-      {
-        "action": {
-          "type": "text",
-          "payload": "{\"button\": \"next\"}",
-          "label": "Следующий"
-        },
-        "color": "primary"
-      },
-      {
-        "action": {
-          "type": "text",
-          "payload": "{\"button\": \"favorites\"}",
-          "label": "Избранное"
-        },
-        "color": "positive"
-      },
-      {
-        "action": {
-          "type": "text",
-          "payload": "{\"button\": \"next\"}",
-          "label": "Добавить в Избранное"
-        },
-        "color": "primary"
-      }
+          [{
+            "action": {
+              "type": "text",
+              "payload": "{\"button\": \"next\"}",
+              "label": "Следующий"
+            },
+            "color": "primary"
+          },
+          {
+            "action": {
+              "type": "text",
+              "payload": "{\"button\": \"next\"}",
+              "label": "Добавить в Избранное"
+            },
+            "color": "positive"
+          }],
+        [{
+          "action": {
+            "type": "text",
+            "payload": "{\"button\": \"next\"}",
+            "label": "Показать Избранное"
+          },
+          "color": "negative"
+        }]
     ]
-  ]
+
 }

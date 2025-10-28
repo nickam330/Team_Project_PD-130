@@ -13,6 +13,7 @@ class Users(Base):
     status = sq.Column(sq.Integer, default=0)
     date_of_key = sq.Column(sq.DateTime, nullable=True)
     expires_in = sq.Column(sq.Integer, nullable=True)
+    last_user = sq.Column(sq.Integer, nullable=True)
     _device_id = sq.Column(sq.Text(), nullable=True)
     _access_token_encrypted = sq.Column(
         "access_token", sq.Text(), nullable=True)
